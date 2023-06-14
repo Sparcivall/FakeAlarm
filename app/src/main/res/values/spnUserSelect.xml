@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="fourBitches">
+        <item>Nadie</item>
+        <item>Alen</item>
+        <item>Franco</item>
+        <item>Gasman</item>
+        <item>Roi</item>
+    </string-array>
+</resources>
