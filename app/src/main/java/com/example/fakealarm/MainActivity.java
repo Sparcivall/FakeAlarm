@@ -12,6 +12,10 @@ import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
 public class MainActivity extends Activity {
 
     private ImageView imgAlarm;
@@ -21,6 +25,12 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        try {
+            Connection connection = DriverManager.getConnection("jdbc:mysql://sparcival.com:3306/FakeAlarmDB","","");
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
 
         spnUserSelect=findViewById(R.id.spnUserSelect);
 
